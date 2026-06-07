@@ -1,0 +1,109 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+/* HEADER */
+.header{
+    background: linear-gradient(135deg, #0ea5e9, #22c55e);
+    padding:25px 15px;
+    text-align:center;
+    border-radius:0 0 20px 20px;
+}
+
+.header h1{
+    font-size:24px;
+}
+
+.header p{
+    font-size:13px;
+    opacity:0.9;
+}
+
+/* CONTAINER */
+.container{
+    padding:15px;
+}
+
+/* CARDS */
+.card{
+    background:#1e293b;
+    margin:12px 0;
+    padding:18px;
+    border-radius:15px;
+    font-size:16px;
+    font-weight:bold;
+    border-left:5px solid #22c55e;
+    box-shadow:0 4px 10px rgba(0,0,0,0.4);
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform: translateX(5px);
+}
+
+/* INPUTS */
+input{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border-radius:8px;
+    border:none;
+}
+
+/* BUTTON */
+button{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    background:#0ea5e9;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+/* GSM RESULT BOX */
+#gsmBox{
+    margin-top:15px;
+    padding:20px;
+    background:#22c55e;
+    color:white;
+    font-size:22px;
+    font-weight:bold;
+    border-radius:15px;
+    text-align:center;
+}
+button{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    background:#0ea5e9;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+}
+.resultBox {
+    margin-top: 15px;
+    padding: 15px;
+    background: #f5f5f5;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}

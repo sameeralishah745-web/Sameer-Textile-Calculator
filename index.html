@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Textile Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Sameer Textile Calculator</h1>
+    <p>Professional Fabric Tools</p>
+</div>
+
+<!-- HOME -->
+<div class="container">
+
+    <div class="card" onclick="openSimpleGSM()">📏 Calculate GSM</div>
+    <div class="card" onclick="openFabricGSM()">🧵 Fabric GSM Calculator</div>
+    <div class="card" onclick="openWeight()">⚖ Fabric Weight Calculator</div>
+    <div class="card" onclick="openYarn()">🧵 Yarn Count Calculator</div>
+    <div class="card" onclick="openConsumption()">📦 Consumption Calculator</div>
+    <div class="card" onclick="openWarpWeft()">🧵 Warp & Weft Calculator</div>
+
+</div>
+
+<!-- SIMPLE GSM -->
+<div id="simpleGSM" style="display:none; padding:15px;">
+    <h2>📏 Calculate GSM</h2>
+
+    <input type="number" id="weight" placeholder="Weight (grams)">
+    <input type="number" id="length" placeholder="Length (CM)">
+    <input type="number" id="width" placeholder="Width (CM)">
+
+    <button onclick="calculateSimpleGSM()">Calculate GSM</button>
+    <button onclick="goHome()">⬅ Back</button>
+
+    <div id="simpleResult" class="resultBox"></div>
+</div>
+
+<!-- FABRIC GSM -->
+<div id="fabricGSM" style="display:none; padding:15px;">
+    <h2>🧵 Fabric GSM Calculator</h2>
+
+    <input type="number" id="warp" placeholder="Warp Count">
+    <input type="number" id="weft" placeholder="Weft Count">
+    <input type="number" id="ppi" placeholder="Picks Per Inch (PPI)">
+    <input type="number" id="rpi" placeholder="Reed Per Inch (RPI)">
+
+    <button onclick="calculateFabricGSM()">Calculate GSM</button>
+    <button onclick="goHome()">⬅ Back</button>
+
+    <div id="fabricResult" class="resultBox"></div>
+</div>
+
+<!-- WEIGHT -->
+<div id="weightScreen" style="display:none; padding:15px;">
+    <h2>⚖ Fabric Weight Calculator</h2>
+
+    <input type="number" id="fw_gsm" placeholder="GSM">
+    <input type="number" id="fw_length" placeholder="Length (CM)">
+    <input type="number" id="fw_width" placeholder="Width (CM)">
+
+    <button onclick="calculateWeight()">Calculate Weight</button>
+    <button onclick="goHome()">⬅ Back</button>
+
+    <div id="weightResult" class="resultBox"></div>
+</div>
+
+<!-- YARN -->
+<div id="yarnScreen" style="display:none; padding:15px;">
+    <h2>🧵 Yarn Count Calculator</h2>
+
+    <input type="number" id="yarn_weight" placeholder="Weight (grams)">
+    <input type="number" id="yarn_length" placeholder="Length (meters)">
+
+    <button onclick="calculateYarn()">Calculate Yarn</button>
+    <button onclick="goHome()">⬅ Back</button>
+
+    <div id="yarnResult" class="resultBox"></div>
+</div>
+
+<!-- CONSUMPTION -->
+<div id="consumptionScreen" style="display:none; padding:15px;">
+    <h2>📦 Consumption Calculator</h2>
+
+    <input type="number" id="con_gsm" placeholder="GSM">
+    <input type="number" id="con_length" placeholder="Length per piece">
+    <input type="number" id="con_pieces" placeholder="Pieces">
+
+    <button onclick="calculateConsumption()">Calculate</button>
+    <button onclick="goHome()">⬅ Back</button>
+
+    <div id="conResult" class="resultBox"></div>
+</div>
+
+<!-- WARP & WEFT -->
+<div id="warpWeftScreen" style="display:none; padding:15px;">
+    <h2>🧵 Warp & Weft Calculator</h2>
+
+    <h3>Warp</h3>
+    <input type="number" id="warp_ends" placeholder="Warp Ends">
+    <input type="number" id="warp_length" placeholder="Warp Length (m)">
+    <input type="number" id="warp_count" placeholder="Warp Count">
+
+    <button onclick="calculateWarp()">Calculate Warp</button>
+    <div id="warpResult" class="resultBox"></div>
+
+    <hr>
+
+    <h3>Weft</h3>
+    <input type="number" id="weft_picks" placeholder="Weft Picks">
+    <input type="number" id="fabric_width" placeholder="Fabric Width">
+    <input type="number" id="weft_count" placeholder="Weft Count">
+
+    <button onclick="calculateWeft()">Calculate Weft</button>
+    <div id="weftResult" class="resultBox"></div>
+
+    <br>
+    <button onclick="goHome()">⬅ Back</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
