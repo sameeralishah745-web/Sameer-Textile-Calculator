@@ -107,3 +107,59 @@ button{
     text-align: center;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
+/* RESPONSIVE FIX */
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .card {
+        font-size: 14px;
+        padding: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #gsmBox {
+        font-size: 18px;
+        padding: 15px;
+    }
+}
+
+.title-box{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
+
+.header-logo{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid white;
+}
+
+.title-box h1{
+    margin:0;
+}

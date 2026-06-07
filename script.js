@@ -4,14 +4,15 @@
 function goHome(){
     document.querySelector(".container").style.display = "block";
 
-    let screens = [
-        "simpleGSM",
-        "fabricGSM",
-        "weightScreen",
-        "yarnScreen",
-        "consumptionScreen",
-        "warpWeftScreen"
-    ];
+   let screens = [
+    "simpleGSM",
+    "fabricGSM",
+    "weightScreen",
+    "yarnScreen",
+    "consumptionScreen",
+    "warpWeftScreen",
+    "pileHeightScreen"
+];
 
     screens.forEach(id => {
         let el = document.getElementById(id);
@@ -188,4 +189,33 @@ function calculateWeft(){
 
     document.getElementById("weftResult").innerHTML =
     "🧵 Weft Yarn = " + result.toFixed(2);
+}
+function openPileHeight(){
+    goHome();
+    document.querySelector(".container").style.display = "none";
+    document.getElementById("pileHeightScreen").style.display = "block";
+}
+function calculatePileHeight(){
+
+    let pileRatio = parseFloat(
+        document.getElementById("pileRatio").value
+    );
+
+    let singlePPI = parseFloat(
+        document.getElementById("singlePPI").value
+    );
+
+    if(isNaN(pileRatio) || isNaN(singlePPI)){
+        document.getElementById("pileResult").innerHTML =
+        "⚠ Fill all fields";
+        return;
+    }
+
+    let pileHeight =
+        (((pileRatio / singlePPI) * 25.4) / 2) - 1;
+
+    document.getElementById("pileResult").innerHTML =
+        "📐 Pile Height = " +
+        pileHeight.toFixed(2) +
+        " MM";
 }

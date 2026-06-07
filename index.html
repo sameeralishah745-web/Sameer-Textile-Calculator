@@ -7,11 +7,16 @@
 
 <body>
 
-<div class="header">
-    <h1>Sameer Textile Calculator</h1>
-    <p>Professional Fabric Tools</p>
-</div>
+<<div class="header">
 
+    <div class="title-box">
+        <img src="sameer png.png" alt="Sameer" class="header-logo">
+        <h1>Sameer Textile Calculator</h1>
+    </div>
+
+    <p>Professional Fabric Tools</p>
+
+</div>
 <!-- HOME -->
 <div class="container">
 
@@ -21,7 +26,7 @@
     <div class="card" onclick="openYarn()">🧵 Yarn Count Calculator</div>
     <div class="card" onclick="openConsumption()">📦 Consumption Calculator</div>
     <div class="card" onclick="openWarpWeft()">🧵 Warp & Weft Calculator</div>
-
+<div class="card" onclick="openPileHeight()">📐 Pile Height MM</div>
 </div>
 
 <!-- SIMPLE GSM -->
@@ -124,3 +129,19 @@
 
 </body>
 </html>
+<!-- PILE HEIGHT -->
+<div id="pileHeightScreen" style="display:none; padding:15px;">
+
+    <h2>📐 Pile Height MM Calculator</h2>
+
+    <input type="number" id="pileRatio" placeholder="Pile Ratio">
+
+    <input type="number" id="singlePPI" placeholder="Single Pick Per Inch">
+
+    <button onclick="calculatePileHeight()">Calculate</button>
+
+    <button onclick="goHome()">⬅ Back</button>
+
+    <div id="pileResult" class="resultBox"></div>
+
+</div>
